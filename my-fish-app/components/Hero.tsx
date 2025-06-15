@@ -2,7 +2,8 @@
 
 import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon , ChevronDownIcon} from '@heroicons/react/24/outline'
+import { NAV_ITEMS } from '@/constants/navItems'
 
 const navigation = [
   { name: 'Product', href: '#' },
@@ -13,6 +14,11 @@ const navigation = [
 
 export default function HeroSection() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [openMenu, setOpenMenu] = useState<string | null>(null)
+
+  const toggleMenu = (menu: string) => {
+    setOpenMenu(openMenu === menu ? null : menu)
+  }
 
   return (
     <div className="bg-white">
@@ -20,14 +26,46 @@ export default function HeroSection() {
         <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
+              <span className="sr-only">Welcome to AquaCharm</span>
               <img
                 alt=""
-                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+                src="/fish-logo.jpg"
                 className="h-8 w-auto"
               />
             </a>
           </div>
+
+           <div className="hidden lg:flex gap-6">
+            {NAV_ITEMS.map(({ label, items }) => (
+              <div key={label} className="relative">
+                <button
+                  onClick={() => toggleMenu(label)}
+                  className="flex items-center gap-1 text-sm font-semibold text-gray-700 hover:text-indigo-600"
+                >
+                  {label} <ChevronDownIcon className="h-4 w-4" />
+                </button>
+                {openMenu === label && (
+                  <ul className="absolute left-0 mt-2 w-44 rounded-md bg-white shadow-lg ring-1 ring-gray-200 z-50">
+                    {items.map((item) => (
+                      <li key={item}>
+                        <a
+                          href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        >
+                          {item}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+          </div>
+
+
+
+
+
           <div className="flex lg:hidden">
             <button
               type="button"
@@ -38,28 +76,17 @@ export default function HeroSection() {
               <Bars3Icon aria-hidden="true" className="size-6" />
             </button>
           </div>
-          <div className="hidden lg:flex lg:gap-x-12">
-            {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-sm/6 font-semibold text-gray-900">
-                {item.name}
-              </a>
-            ))}
-          </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm/6 font-semibold text-gray-900">
-              Log in <span aria-hidden="true">&rarr;</span>
-            </a>
-          </div>
+
         </nav>
         <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
           <div className="fixed inset-0 z-50" />
           <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Your Company</span>
+                <span className="sr-only">Welcome to AquaCharm</span>
                 <img
                   alt=""
-                  src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+                  src="/fish-logo.jpg"
                   className="h-8 w-auto"
                 />
               </a>
@@ -84,14 +111,6 @@ export default function HeroSection() {
                       {item.name}
                     </a>
                   ))}
-                </div>
-                <div className="py-6">
-                  <a
-                    href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                  >
-                    Log in
-                  </a>
                 </div>
               </div>
             </div>
@@ -141,11 +160,10 @@ export default function HeroSection() {
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="relative w-full lg:max-w-xl lg:shrink-0 xl:max-w-2xl">
                   <h1 className="text-5xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-7xl">
-                    We’re changing the way people connect
+                    Welcome to AquaCharm – Your Gateway to an Underwater Paradise!
                   </h1>
                   <p className="mt-8 text-lg font-medium text-pretty text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none">
-                    Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
-                    amet fugiat veniam occaecat fugiat aliqua. Anim aute id magna aliqua ad ad non deserunt sunt.
+                    Dive into a vibrant world of ornamental fish, where beauty meets serenity. At AquaCharm, we specialize in handpicked, healthy, and colorful fish that turn any aquarium into a living masterpiece. Whether you're a beginner or a seasoned aquarist, you'll find stunning freshwater and exotic species that bring life to your space.
                   </p>
                   <div className="mt-10 flex items-center gap-x-6">
                     <a
@@ -164,7 +182,7 @@ export default function HeroSection() {
                     <div className="relative">
                       <img
                         alt=""
-                        src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+                        src="/fish4.jpg"
                         className="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset" />
@@ -174,7 +192,7 @@ export default function HeroSection() {
                     <div className="relative">
                       <img
                         alt=""
-                        src="https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+                        src="/fish5.jpg"
                         className="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset" />
@@ -182,7 +200,7 @@ export default function HeroSection() {
                     <div className="relative">
                       <img
                         alt=""
-                        src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=396&h=528&q=80"
+                        src="/fish2.jpg"
                         className="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset" />
@@ -192,7 +210,7 @@ export default function HeroSection() {
                     <div className="relative">
                       <img
                         alt=""
-                        src="https://images.unsplash.com/photo-1670272504528-790c24957dda?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=left&w=400&h=528&q=80"
+                        src="/fish3.jpg"
                         className="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset" />
@@ -200,7 +218,7 @@ export default function HeroSection() {
                     <div className="relative">
                       <img
                         alt=""
-                        src="https://images.unsplash.com/photo-1670272505284-8faba1c31f7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+                        src="/fish1.jpg"
                         className="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset" />
