@@ -3,6 +3,9 @@
 import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Roboto, Anton} from 'next/font/google'
+
+
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -11,20 +14,21 @@ const navigation = [
   { name: 'Contact', href: '/contact' },
 ]
 
+
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-blue-700">
-      <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+    <header className="bg-indigo-900 text-white">
+      <nav aria-label="Global" className="mx-auto flex max-w-7xl font-[Roboto] fontitems-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
-            <img
-              alt=""
+          <a href="#" className="flex items-center gap-2 p-1.5 ">
+           <img
+              alt="Aquacharm Logo"
               src="/fish-logo.jpg"
-              className="h-28 w-auto relative  border-2 bg-red-500 "
+              className="h-auto w-20 relative"
             />
+             <span className="text-3xl font-semibold font-[Anton] text-white ">AquaCharm</span>
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -39,13 +43,13 @@ export default function Header() {
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
-            <a key={item.name} href={item.href} className="text-sm/6 font-semibold text-white">
+            <a key={item.name} href={item.href} className="text-2xl font-bold text-shadow-sky-900">
               {item.name}
             </a>
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm/6 font-semibold text-white">
+          <a href="#" className="text-2xl font-bold text-shadow-sky-900">
             Log in <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
@@ -55,7 +59,7 @@ export default function Header() {
         <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
+              <span className="sr-only">Aquamarine</span>
               <img
                 alt=""
                 src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
