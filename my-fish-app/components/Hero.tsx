@@ -34,7 +34,7 @@ export default function HeroSection() {
   }
 
   return (
-    <div className="bg-indigo-300">
+    <div className="bg-blue-700">
       <header className="absolute inset-x-0 top-0 z-50">
         <nav aria-label="Global" className="flex max-w-7xl items-center justify-between  lg:px-8">
           {/* <div className="flex lg:flex-1  ">
@@ -42,15 +42,15 @@ export default function HeroSection() {
           </div> */}
 
           <div className="hidden font-[Roboto] lg:flex gap-6">
-             <a href="#" className="m-0 p-0">
+             {/* <a href="#" className="m-0 p-0">
               <span className="sr-only">Welcome to AquaCharm</span>
               <img src="/fish-logo.jpg" alt="" className="h-auto w-20" />
-            </a>
+            </a> */}
             {NAV_ITEMS.map(({ label, items }) => (
               <div key={label} className="relative">
                 <button
                   onClick={() => toggleMenu(label)}
-                  className="flex items-center gap-1 p-1.5 text-sm font-semibold text-sky-800 hover:text-indigo-600"
+                  className="flex items-center gap-1 p-1.5 text-xl font-semibold text-white hover:text-sky-500"
                 >
                   {label} <ChevronDownIcon className="h-4 w-4" />
                 </button>
@@ -154,10 +154,10 @@ export default function HeroSection() {
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 {/* Left Text Column */}
                 <div className="flex relative w-full bg-sky-200 text-center p-8 items-center flex-col lg:max-w-xl lg:shrink-0 xl:max-w-2xl">
-                  <h1 className="text-5xl font-semibold tracking-tight mt-8 text-sky-500 sm:text-7xl">
+                  <h1 className="text-5xl font-semibold tracking-tight mt-8 text-blue-500 sm:text-7xl">
                     Welcome to AquaCharm – Your Gateway to an Underwater Paradise!
                   </h1>
-                  <p className="mt-8 text-lg font-medium text-sky-600 p-8 sm:text-xl/8">
+                  <p className="mt-8 text-lg font-medium text-blue-700 p-8 sm:text-xl/8">
                     Dive into a vibrant world of ornamental fish, where beauty meets serenity. At AquaCharm, we
                     specialize in handpicked, healthy, and colorful fish that turn any aquarium into a living
                     masterpiece. Whether you're a beginner or a seasoned aquarist, you'll find stunning freshwater and
@@ -165,7 +165,7 @@ export default function HeroSection() {
                   </p>
                   <a
                     href="#"
-                    className="mt-10 rounded-md bg-sky-800 px-3.5 py-2.5 mb-8 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500"
+                    className="mt-10 rounded-md bg-sky-800 px-3.5 py-2.5 mb-8 text-sm font-semibold text-white shadow-xs hover:bg-sky-500"
                   >
                     Get started
                   </a>
