@@ -50,6 +50,7 @@ export default function RootLayout({
         <main className="relative overflow-hidden">
           {children}
         </main>
+        <section></section>
         <Footer />
       </body>
     </html>

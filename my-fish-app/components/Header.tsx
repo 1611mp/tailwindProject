@@ -17,7 +17,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-blue-900">
+    <header className="bg-gradient-to-r from-sky-400 to-blue-700 p-6 rounded-lg text-white">
       <div className="mx-auto max-w-7xl flex items-center justify-between px-4 py-5 sm:px-6 lg:px-8">
         {/* Logo */}
         <a href="/" className="flex items-center gap-2">

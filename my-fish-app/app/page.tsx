@@ -3,24 +3,28 @@ import Form from "@/components/Form";
 import Hero from "@/components/Hero";
 import FishSlider from "@/components/Carousel";
 import SideVideos from "@/components/SideVideos";
+import FeatureBadges from "@/components/FeatureBadges";
 
 export default function Home() {
   return (
-
     <main className="w-full bg-white">
-      <><Hero /><Blog />
-       <section className="flex justify-center items-center min-h-[600px] bg-white">
-        <SideVideos>
-        <FishSlider/>
-        </SideVideos>
-        </section>
-        <Form/>
-        </>
+      <Hero />
+      <Blog />
 
+      <section className="w-full bg-gradient-to-b from-blue-200 to-blue-900 py-10">
+  <div className="max-w-7xl mx-auto px-4">
+    {/* SideVideos with FishSlider inside */}
+    <SideVideos>
+      <FishSlider />
+    </SideVideos>
+  </div>
+</section>
+
+      <FeatureBadges />
+
+      <section>
+        <Form />
+      </section>
     </main>
-
-
-
-
-    );
+  );
 }

@@ -34,7 +34,7 @@ export default function HeroSection() {
   }
 
   return (
-    <div className="bg-blue-700">
+    <div className="bg-gradient-to-r from-blue-700 via-blue-400 to-sky-300">
       <header className="absolute inset-x-0 top-0 z-50">
         <nav aria-label="Global" className="flex max-w-7xl items-center justify-between  lg:px-8">
           {/* <div className="flex lg:flex-1  ">
