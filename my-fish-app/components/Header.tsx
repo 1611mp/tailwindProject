@@ -1,16 +1,17 @@
 'use client'
 
-import { useState } from 'react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import Image from 'next/image'
+import { useState } from "react"
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
+import Image from "next/image"
+import Link from "next/link"
 
 const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'About Us', href: '/about' },
-  { name: 'Shop', href: '/shop' },
-  { name: 'Pages', href: '/pages' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Contact Us', href: '/contact' },
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about" },
+  { name: "Shop", href: "/products" },
+  { name: "Pages", href: "/pages" },
+  { name: "Blog", href: "/blog" },
+  { name: "Contact Us", href: "/contact" },
 ]
 
 export default function Header() {
@@ -20,40 +21,45 @@ export default function Header() {
     <header className="bg-gradient-to-r from-sky-400 to-blue-700 p-6 rounded-lg text-white">
       <div className="mx-auto max-w-7xl flex items-center justify-between px-4 py-5 sm:px-6 lg:px-8">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2">
           <Image src="/Aquacharm-logo.png" alt="Aquacharm" width={40} height={40} />
           <span className="text-xl font-bold text-white">Aquacharm</span>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
           {navigation.map((item) => (
-            <a
+            <Link
               key={item.name}
               href={item.href}
-              className="text-base font-medium text-white hover:text-sky-500"
+              className="text-base font-medium text-white hover:text-sky-200"
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </nav>
 
         {/* Auth Buttons */}
         <div className="hidden md:flex items-center space-x-4">
-          <a href="#" className="text-sm font-medium text-white hover:text-sky-500">Sign in</a>
-          <a
-            href="#"
-            className="rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-sky-500"
+          <Link
+            href="/signin"
+            className="rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-500"
+          >
+            Sign in
+          </Link>
+          <Link
+            href="/signup"
+            className="rounded-md bg-white text-indigo-600 px-4 py-2 text-sm font-medium hover:bg-gray-100"
           >
             Sign up
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
           <button
             type="button"
-            className="inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-white hover:text-black"
+            className="inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-white hover:text-black"
             onClick={() => setMobileMenuOpen(true)}
           >
             <Bars3Icon className="h-6 w-6" />
@@ -65,7 +71,7 @@ export default function Header() {
       {mobileMenuOpen && (
         <div className="md:hidden bg-white shadow-lg">
           <div className="flex items-center justify-between px-4 py-4">
-            <span className="text-lg font-bold text-white">Menu</span>
+            <span className="text-lg font-bold text-gray-800">Menu</span>
             <button
               type="button"
               className="p-2 text-gray-700 hover:text-black"
@@ -76,24 +82,28 @@ export default function Header() {
           </div>
           <nav className="px-4 pb-4 space-y-2">
             {navigation.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
-                className="block rounded-md px-2 py-2 text-white hover:bg-gray-100"
+                className="block rounded-md px-2 py-2 text-gray-700 hover:bg-gray-100"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
+
             <div className="mt-4 space-y-2">
-              <a
-                href="#"
-                className="block w-full rounded-md bg-indigo-600 px-4 py-2 text-center text-sm font-medium text-white hover:bg-indigo-700"
+              <Link
+                href="/signin"
+                className="block w-full rounded-md bg-indigo-600 px-4 py-2 text-center text-sm font-medium text-white hover:bg-indigo-500"
+              >
+                Sign in
+              </Link>
+              <Link
+                href="/signup"
+                className="block w-full rounded-md bg-white text-indigo-600 px-4 py-2 text-center text-sm font-medium hover:bg-gray-100"
               >
                 Sign up
-              </a>
-              <a href="#" className="block text-center text-sm font-medium text-gray-600">
-                Already have an account? <span className="text-indigo-600">Sign in</span>
-              </a>
+              </Link>
             </div>
           </nav>
         </div>

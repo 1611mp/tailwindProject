@@ -47,21 +47,26 @@ export default function FishSlider() {
           }}
         >
           {fishData.map((fish) => (
-            <SwiperSlide key={fish.id}>
-              <Link href={`/fish/${fish.id}`} passHref legacyBehavior>
-                <a className="block">
-                  <div className="bg-white shadow-md rounded-lg overflow-hidden h-full flex flex-col cursor-pointer hover:scale-105 transition">
-                    <img src={fish.image} alt={fish.name} className="h-40 w-full object-cover" />
-                    <div className="p-3 flex flex-col flex-grow">
-                      <h3 className="text-lg font-semibold">{fish.name}</h3>
-                      <p className="text-sm text-gray-600 flex-grow">{fish.description}</p>
-                      <p className="mt-2 text-indigo-600 font-bold">{fish.price}</p>
-                    </div>
-                  </div>
-                </a>
-              </Link>
-            </SwiperSlide>
-          ))}
+  <SwiperSlide key={fish.id}>
+    <Link
+      href={`/fish/${fish.id}`}
+      className="block h-full"
+    >
+      <div className="bg-white shadow-md rounded-lg overflow-hidden h-full flex flex-col cursor-pointer hover:scale-105 transition">
+        <img
+          src={fish.image}
+          alt={fish.name}
+          className="h-40 w-full object-cover"
+        />
+        <div className="p-3 flex flex-col flex-grow">
+          <h3 className="text-lg font-semibold">{fish.name}</h3>
+          <p className="text-sm text-gray-600 flex-grow">{fish.description}</p>
+          {fish.price && <p className="mt-2 text-indigo-600 font-bold">{fish.price}</p>}
+        </div>
+      </div>
+    </Link>
+  </SwiperSlide>
+))}
         </Swiper>
       </div>
     </div>

@@ -1,5 +1,6 @@
-[
 
+
+ [
   {
     "id": 1,
     "name": "Goldfish",
@@ -13,13 +14,15 @@
     "diet": "Omnivorous; flakes, pellets, and live foods",
     "temperament": "Peaceful; can be kept with other non-aggressive species",
     "care_tips": "Minimum tank size 20 gallons for a single goldfish, water temperature 65–72°F (18–22°C), pH 7.0–8.4",
-    "interesting_fact": "One of the oldest domesticated fish species, with history over 1,000 years"
-
+    "interesting_fact": "One of the oldest domesticated fish species, with history over 1,000 years",
+    "rating": 4.6,
+    "reviewCount": 320,
+    "price": 1800
   },
   {
     "id": 2,
     "name": "Betta",
-    "image": "/betta.jpg",
+    "image": "/betta1.jpg",
     "description": "Known for its vibrant colors and flowing fins.",
     "scientific_name": "Betta splendens",
     "origin": "Southeast Asia (Thailand, Cambodia, Vietnam, Malaysia)",
@@ -29,7 +32,10 @@
     "diet": "Carnivorous; feeds on insects and larvae in the wild. In captivity: high-quality pellets, frozen, and live foods",
     "temperament": "Males are territorial; females can be kept in groups",
     "care_tips": "Minimum tank size 5 gallons, water temperature 76–82°F (24–28°C), pH 6.5–7.5, provide a lid",
-    "interesting_fact": "Betta fish have labyrinth organs, allowing them to breathe atmospheric oxygen"
+    "interesting_fact": "Betta fish have labyrinth organs, allowing them to breathe atmospheric oxygen",
+    "rating": 4.4,
+    "reviewCount": 210,
+    "price": 2300
   },
   {
     "id": 3,
@@ -44,7 +50,10 @@
     "diet": "Omnivorous; flakes, live, and frozen foods",
     "temperament": "Peaceful and social; best kept in groups",
     "care_tips": "Minimum tank size 10 gallons, water temperature 72–82°F (22–28°C), pH 7.0–8.0",
-    "interesting_fact": "Guppies are prolific breeders; females can store sperm and give birth to multiple batches of fry from a single mating"
+    "interesting_fact": "Guppies are prolific breeders; females can store sperm and give birth to multiple batches of fry from a single mating",
+    "rating": 4.7,
+    "reviewCount": 185,
+    "price": 1700
   },
   {
     "id": 4,
@@ -59,7 +68,10 @@
     "diet": "Omnivorous; prefers live, frozen, and high-quality flake foods",
     "temperament": "Generally peaceful, but can be territorial; best kept in small groups",
     "care_tips": "Minimum tank size 50 gallons, water temperature 82–86°F (28–30°C), pH 6.0–7.0",
-    "interesting_fact": "Discus are known for their complex social behavior and are often kept in groups to promote natural behavior"
+    "interesting_fact": "Discus are known for their complex social behavior and are often kept in groups to promote natural behavior",
+    "rating": 4.8,
+    "reviewCount": 95,
+    "price": 3000
   },
   {
     "id": 5,
@@ -74,7 +86,10 @@
     "diet": "Omnivorous; prefers live, frozen, and high-quality flake foods",
     "temperament": "Generally peaceful, but can be territorial and fin-nippy; best kept in pairs or small groups",
     "care_tips": "Minimum tank size 20 gallons, water temperature 78–82°F (25–28°C), pH 6.0–7.0",
-    "interesting_fact": "Angelfish are known for their monogamous pair bonding and are often kept in pairs to promote natural behavior"
+    "interesting_fact": "Angelfish are known for their monogamous pair bonding and are often kept in pairs to promote natural behavior",
+    "rating": 4.5,
+    "reviewCount": 160,
+    "price": 1500
   },
   {
     "id": 6,
@@ -89,7 +104,10 @@
     "diet": "Carnivorous; prefers live, frozen, and meaty foods",
     "temperament": "Can be aggressive and territorial; best kept alone or with large, peaceful tankmates",
     "care_tips": "Minimum tank size 55 gallons, water temperature 74–81°F (23–27°C), pH 6.5–7.5",
-    "interesting_fact": "Oscars are known for their intelligence and can recognize their owners, often interacting with them"
+    "interesting_fact": "Oscars are known for their intelligence and can recognize their owners, often interacting with them",
+    "rating": 4.2,
+    "reviewCount": 140,
+    "price": 2000
   },
   {
     "id": 7,
@@ -104,7 +122,10 @@
     "diet": "Omnivorous; prefers small, meaty foods and micro-organisms",
     "temperament": "Peaceful and schooling; best kept in large groups",
     "care_tips": "Minimum tank size 10 gallons, water temperature 68–78°F (20–25°C), pH 4.0–7.0",
-    "interesting_fact": "Neon Tetras are known for their iridescent blue and red stripes, which are created by reflective cells in their skin"
+    "interesting_fact": "Neon Tetras are known for their iridescent blue and red stripes, which are created by reflective cells in their skin",
+    "rating": 4.9,
+    "reviewCount": 280,
+    "price": 1700
   },
   {
     "id": 8,
@@ -119,9 +140,11 @@
     "diet": "Omnivorous; prefers algae, small invertebrates, and commercial flake foods",
     "temperament": "Peaceful and social; best kept in small groups",
     "care_tips": "Minimum tank size 10 gallons, water temperature 72–82°F (22–28°C), pH 7.0–8.0",
-    "interesting_fact": "Mollies are live-bearers, meaning they give birth to live young rather than laying eggs"
+    "interesting_fact": "Mollies are live-bearers, meaning they give birth to live young rather than laying eggs",
+    "rating": 4.3,
+    "reviewCount": 120,
+    "price": 1200
   },
-
   {
     "id": 9,
     "name": "Swordtail",
@@ -135,9 +158,11 @@
     "diet": "Omnivorous; prefers algae, small invertebrates, and commercial flake foods",
     "temperament": "Peaceful and social; best kept in small groups",
     "care_tips": "Minimum tank size 10 gallons, water temperature 72–82°F (22–28°C), pH 7.0–8.0",
-    "interesting_fact": "Swordtails are live-bearers and are known for their elaborate courtship rituals"
+    "interesting_fact": "Swordtails are live-bearers and are known for their elaborate courtship rituals",
+    "rating": 4.4,
+    "reviewCount": 105,
+    "price": 1800
   },
-
   {
     "id": 10,
     "name": "Platy",
@@ -151,6 +176,9 @@
     "diet": "Omnivorous; prefers algae, small invertebrates, and commercial flake foods",
     "temperament": "Peaceful and social; best kept in small groups",
     "care_tips": "Minimum tank size 10 gallons, water temperature 72–82°F (22–28°C), pH 7.0–8.0",
-    "interesting_fact": "Platies are live-bearers and are known for their peaceful nature, making them suitable for community tanks"
+    "interesting_fact": "Platies are live-bearers and are known for their peaceful nature, making them suitable for community tanks",
+    "rating": 4.5,
+    "reviewCount": 98,
+    "price": 2500
   }
 ]
