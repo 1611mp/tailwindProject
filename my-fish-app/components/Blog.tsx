@@ -1,52 +1,47 @@
+
+import Link from "next/link";
+
 const posts = [
   {
     id: 1,
     title: "Beginner’s Guide to Setting Up the Perfect Home Aquarium",
-    href: '#',
+    href: '/blog',
     description:
       'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    imageUrl:
-      '/fishes-1.jpg',
+    imageUrl: '/fishes-1.jpg',
     date: 'Apr 11, 2025',
     datetime: '2025-04-11',
     author: {
       name: 'Heiko Bleher',
-      imageUrl:
-        'https://alchetron.com/cdn/heiko-bleher-279b7d20-8ba3-480b-b793-994313931fb-resize-750.jpeg',
+      imageUrl: 'https://alchetron.com/cdn/heiko-bleher-279b7d20-8ba3-480b-b793-994313931fb-resize-750.jpeg',
     },
   },
-  // More posts...
   {
-  id: 2,
+    id: 2,
     title: 'Top 10 Colorful Fish That Thrive in Small Tanks',
-    href: '#',
+    href: '/blog',
     description:
       'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    imageUrl:
-      '/fishes-2.jpg',
+    imageUrl: '/fishes-2.jpg',
     date: 'May 21, 2025',
     datetime: '2025-05-21',
     author: {
       name: 'Takashi Amano',
-      imageUrl:
-        'https://th.bing.com/th/id/OIP.tKiBOC_BsCQ4bgYD5A296gHaHa?r=0&rs=1&pid=ImgDetMain&cb=idpwebp2&o=7&rm=3',
+      imageUrl: 'https://th.bing.com/th/id/OIP.tKiBOC_BsCQ4bgYD5A296gHaHa?r=0&rs=1&pid=ImgDetMain&cb=idpwebp2&o=7&rm=3',
     },
   },
-
-   {
-  id: 3,
+  {
+    id: 3,
     title: 'Aquarium Care Made Easy: Tips for a Healthy Underwater World',
-    href: '#',
+    href: '/blog',
     description:
       'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    imageUrl:
-      '/fishes-3.jpg',
+    imageUrl: '/fishes-3.jpg',
     date: 'Jun 22, 2025',
     datetime: '2025-06-22',
     author: {
       name: 'Dr. Paul Loiselle',
-      imageUrl:
-        'https://biotopeaquariumproject.com/wp-content/uploads/2020/05/paul-loiselle-1536x1024.jpg',
+      imageUrl: 'https://biotopeaquariumproject.com/wp-content/uploads/2020/05/paul-loiselle-1536x1024.jpg',
     },
   }
 ]
@@ -86,10 +81,10 @@ export default function Blog() {
                 </div>
               </div>
               <h3 className="mt-3 text-lg/6 font-semibold text-white">
-                <a href={post.href}>
+                <Link href={post.href}>
                   <span className="absolute inset-0" />
                   {post.title}
-                </a>
+                </Link>
               </h3>
             </article>
           ))}
