@@ -48,7 +48,7 @@ const posts = [
 
 export default function Blog() {
   return (
-    <div className="bg-gradient-to-b from-blue-50 to-blue-100 py-24 sm:py-32">
+    <div className="bg-gradient-to-b from-violet-800 via-violet-600 to-violet-400 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center px-3.5 py-4.5 m-4 text-blue-500 bg-sky-200 rounded-2xl">
           <h2 className="text-4xl font-semibold tracking-tight text-balance sm:text-5xl">

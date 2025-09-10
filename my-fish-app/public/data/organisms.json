@@ -1,56 +1,74 @@
-{
-  "terrarium": [
-    {
-      "id": 1,
-      "name": "Leopard Gecko",
-      "scientificName": "Eublepharis macularius",
-      "habitat": "Deserts and dry grasslands",
-      "food": "Insects like crickets, mealworms, roaches",
-      "image": "/leopard-gecko.jpg"
-    },
-    {
-      "id": 2,
-      "name": "Green Anole",
-      "scientificName": "Anolis carolinensis",
-      "habitat": "Woodlands, shrubs, and trees",
-      "food": "Small insects and spiders",
-      "image": "/green-anole.jpg"
-    }
-  ],
-  "freshwater": [
-    {
-      "id": 1,
-      "name": "Goldfish",
-      "scientificName": "Carassius auratus",
-      "habitat": "Freshwater ponds and aquariums",
-      "food": "Flakes, pellets, small insects",
-      "image": "/goldfish.jpg"
-    },
-    {
-      "id": 2,
-      "name": "Betta Fish",
-      "scientificName": "Betta splendens",
-      "habitat": "Shallow freshwater streams and rice paddies",
-      "food": "Insects, worms, fish food pellets",
-      "image": "/betta.jpg"
-    }
-  ],
-  "marine": [
-    {
-      "id": 1,
-      "name": "Clownfish",
-      "scientificName": "Amphiprioninae",
-      "habitat": "Coral reefs, warm waters",
-      "food": "Algae, plankton, small crustaceans",
-      "image": "/clownfish.jpg"
-    },
-    {
-      "id": 2,
-      "name": "Blue Tang",
-      "scientificName": "Paracanthurus hepatus",
-      "habitat": "Coral reefs in the Indo-Pacific",
-      "food": "Algae and plankton",
-      "image": "/blue-tang.jpg"
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "name": "Goldfish",
+    "category": "Freshwater",
+    "description": "A popular freshwater fish with beautiful colors.",
+    "image": "/goldfish.jpg",
+    "price": 1800
+  },
+  {
+    "id": 2,
+    "name": "Betta Fish",
+    "category": "Freshwater",
+    "description": "Known for its vibrant colors and flowing fins.",
+    "image": "/betta1.jpg",
+    "price": 1500
+  },
+  {
+    "id": 3,
+    "name": "Guppy",
+    "category": "Freshwater",
+    "description": "Small and colorful, perfect for beginners.",
+    "image": "/guppy.jpg",
+    "price": 300
+  },
+  {
+    "id": 4,
+    "name": "Clownfish",
+    "category": "Marine",
+    "description": "Famous marine fish, lives among anemones.",
+    "image": "/clownfish.jpg",
+    "price": 2500
+  },
+  {
+    "id": 5,
+    "name": "Blue Tang",
+    "category": "Marine",
+    "description": "Bright blue marine fish loved for aquariums.",
+    "image": "/bluetang.jpg",
+    "price": 3200
+  },
+  {
+    "id": 6,
+    "name": "Angelfish",
+    "category": "Marine",
+    "description": "Elegant marine fish with striking colors.",
+    "image": "/angelfish.jpg",
+    "price": 2800
+  },
+  {
+    "id": 7,
+    "name": "Crested Gecko",
+    "category": "Terrarium",
+    "description": "A small gecko ideal for terrarium setups.",
+    "image": "/crestedGecko.jpg",
+    "price": 4000
+  },
+  {
+    "id": 8,
+    "name": "Tree Frog",
+    "category": "Terrarium",
+    "description": "Bright green frog that thrives in humid terrariums.",
+    "image": "/treefrog.jpg",
+    "price": 3500
+  },
+  {
+    "id": 9,
+    "name": "Anolis Lizard",
+    "category": "Terrarium",
+    "description": "Active lizard perfect for plant-filled terrariums.",
+    "image": "/anolis.jpg",
+    "price": 3000
+  }
+]

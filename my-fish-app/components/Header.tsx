@@ -32,7 +32,8 @@ export default function Header() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-base font-medium text-white hover:text-sky-200"
+              className="text-base bg-gradient-to-r from-sky-400 via-blue-500 to-blue-600 text-white hover:text-sky-200 px-4 py-2 border-2 border-gray-300 rounded  font-semibold
+               shadow-inner hover:shadow-lg transition-all"
             >
               {item.name}
             </Link>
