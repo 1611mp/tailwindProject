@@ -19,7 +19,7 @@ export default function Home() {
   </div>
 </section>
 
-       <section className="w-full bg-gray-50 py-16">
+       <section className="w-full bg-gradient-to-r from-blue-700 via-blue-500 to-blue-300 py-16">
     <div className="max-w-7xl mx-auto px-4">
       <Blog />
     </div>
