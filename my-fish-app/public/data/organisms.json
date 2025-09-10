@@ -6,7 +6,7 @@
       "scientificName": "Eublepharis macularius",
       "habitat": "Deserts and dry grasslands",
       "food": "Insects like crickets, mealworms, roaches",
-      "image": "/images/leopard-gecko.jpg"
+      "image": "/leopard-gecko.jpg"
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "scientificName": "Anolis carolinensis",
       "habitat": "Woodlands, shrubs, and trees",
       "food": "Small insects and spiders",
-      "image": "/images/green-anole.jpg"
+      "image": "/green-anole.jpg"
     }
   ],
   "freshwater": [
@@ -24,7 +24,7 @@
       "scientificName": "Carassius auratus",
       "habitat": "Freshwater ponds and aquariums",
       "food": "Flakes, pellets, small insects",
-      "image": "/images/goldfish.jpg"
+      "image": "/goldfish.jpg"
     },
     {
       "id": 2,
@@ -32,7 +32,7 @@
       "scientificName": "Betta splendens",
       "habitat": "Shallow freshwater streams and rice paddies",
       "food": "Insects, worms, fish food pellets",
-      "image": "/images/betta.jpg"
+      "image": "/betta.jpg"
     }
   ],
   "marine": [
@@ -42,7 +42,7 @@
       "scientificName": "Amphiprioninae",
       "habitat": "Coral reefs, warm waters",
       "food": "Algae, plankton, small crustaceans",
-      "image": "/images/clownfish.jpg"
+      "image": "/clownfish.jpg"
     },
     {
       "id": 2,
@@ -50,7 +50,7 @@
       "scientificName": "Paracanthurus hepatus",
       "habitat": "Coral reefs in the Indo-Pacific",
       "food": "Algae and plankton",
-      "image": "/images/blue-tang.jpg"
+      "image": "/blue-tang.jpg"
     }
   ]
 }
