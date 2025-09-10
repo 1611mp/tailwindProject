@@ -1,0 +1,56 @@
+{
+  "terrarium": [
+    {
+      "id": 1,
+      "name": "Leopard Gecko",
+      "scientificName": "Eublepharis macularius",
+      "habitat": "Deserts and dry grasslands",
+      "food": "Insects like crickets, mealworms, roaches",
+      "image": "/leopard-gecko.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Green Anole",
+      "scientificName": "Anolis carolinensis",
+      "habitat": "Woodlands, shrubs, and trees",
+      "food": "Small insects and spiders",
+      "image": "/green-anole.jpg"
+    }
+  ],
+  "freshwater": [
+    {
+      "id": 1,
+      "name": "Goldfish",
+      "scientificName": "Carassius auratus",
+      "habitat": "Freshwater ponds and aquariums",
+      "food": "Flakes, pellets, small insects",
+      "image": "/goldfish.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Betta Fish",
+      "scientificName": "Betta splendens",
+      "habitat": "Shallow freshwater streams and rice paddies",
+      "food": "Insects, worms, fish food pellets",
+      "image": "/betta.jpg"
+    }
+  ],
+  "marine": [
+    {
+      "id": 1,
+      "name": "Clownfish",
+      "scientificName": "Amphiprioninae",
+      "habitat": "Coral reefs, warm waters",
+      "food": "Algae, plankton, small crustaceans",
+      "image": "/clownfish.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Blue Tang",
+      "scientificName": "Paracanthurus hepatus",
+      "habitat": "Coral reefs in the Indo-Pacific",
+      "food": "Algae and plankton",
+      "image": "/blue-tang.jpg"
+    }
+  ]
+}

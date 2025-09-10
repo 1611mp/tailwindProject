@@ -1,65 +1,60 @@
+
+import Link from "next/link";
+
 const posts = [
   {
     id: 1,
-    title: 'Boost your conversion rate',
-    href: '#',
+    title: "Beginner’s Guide to Setting Up the Perfect Home Aquarium",
+    href: '/blog',
     description:
       'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    imageUrl:
-      'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80',
-    date: 'Mar 16, 2020',
-    datetime: '2020-03-16',
+    imageUrl: '/fishes-1.jpg',
+    date: 'Apr 11, 2025',
+    datetime: '2025-04-11',
     author: {
-      name: 'Michael Foster',
-      imageUrl:
-        'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      name: 'Heiko Bleher',
+      imageUrl: 'https://alchetron.com/cdn/heiko-bleher-279b7d20-8ba3-480b-b793-994313931fb-resize-750.jpeg',
     },
   },
-  // More posts...
   {
-  id: 2,
-    title: 'Boost your conversion rate',
-    href: '#',
+    id: 2,
+    title: 'Top 10 Colorful Fish That Thrive in Small Tanks',
+    href: '/blog',
     description:
       'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    imageUrl:
-      'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80',
-    date: 'Mar 16, 2020',
-    datetime: '2020-03-16',
+    imageUrl: '/fishes-2.jpg',
+    date: 'May 21, 2025',
+    datetime: '2025-05-21',
     author: {
-      name: 'Michael Foster',
-      imageUrl:
-        'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      name: 'Takashi Amano',
+      imageUrl: 'https://th.bing.com/th/id/OIP.tKiBOC_BsCQ4bgYD5A296gHaHa?r=0&rs=1&pid=ImgDetMain&cb=idpwebp2&o=7&rm=3',
     },
   },
-
-   {
-  id: 3,
-    title: 'Boost your conversion rate',
-    href: '#',
+  {
+    id: 3,
+    title: 'Aquarium Care Made Easy: Tips for a Healthy Underwater World',
+    href: '/blog',
     description:
       'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    imageUrl:
-      'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80',
-    date: 'Mar 16, 2020',
-    datetime: '2020-03-16',
+    imageUrl: '/fishes-3.jpg',
+    date: 'Jun 22, 2025',
+    datetime: '2025-06-22',
     author: {
-      name: 'Michael Foster',
-      imageUrl:
-        'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      name: 'Dr. Paul Loiselle',
+      imageUrl: 'https://biotopeaquariumproject.com/wp-content/uploads/2020/05/paul-loiselle-1536x1024.jpg',
     },
   }
 ]
 
 export default function Blog() {
   return (
-    <div className="bg-violet-200 py-24 sm:py-32">
+    <div className="bg-gradient-to-b from-blue-50 to-blue-100 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center px-3.5 py-4.5 m-4 text-sky-900 bg-violet-300 rounded-lg">
+        <div className="mx-auto max-w-2xl text-center px-3.5 py-4.5 m-4 text-blue-500 bg-sky-200 rounded-2xl">
           <h2 className="text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
             “Bringing the ocean to your living room—one blog at a time.”
           </h2>
-          <p className="mt-2 text-lg/8 text-sky-800">Everything you need to keep your tank happy and healthy.</p>
+          <p className="mt-2 text-lg/8 text-blue-700">Everything you need to keep your tank happy and healthy.</p>
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {posts.map((post) => (
@@ -86,10 +81,10 @@ export default function Blog() {
                 </div>
               </div>
               <h3 className="mt-3 text-lg/6 font-semibold text-white">
-                <a href={post.href}>
+                <Link href={post.href}>
                   <span className="absolute inset-0" />
                   {post.title}
-                </a>
+                </Link>
               </h3>
             </article>
           ))}
