@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-anton: 'Anton', sans-serif;
+  --font-alfa-slab: 'Alfa Slab One', serif;
+
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --bg-bodycolor: #DDD6FE;
+  }
+}
+
+body {
+  padding: 0;
+  margin:0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Roboto', 'Anton','Alfa Slab One',  'Open Sans', Helvetica, serif, sans-serif;
+  background-color: var(--bg-bodycolor);
+}
