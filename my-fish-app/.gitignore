@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+public/fish-left.mp4
+
+# Ignore all mp4 video files
+*.mp4
