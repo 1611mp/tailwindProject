@@ -6,11 +6,11 @@ import { useCart } from "@/context/CartContext";
 import { useRouter } from "next/navigation";
 
 type Product = {
-  id?: number;
+  id: number;
   name: string;
   description: string;
-  price?: string;
-  image?: string;
+  price: number;
+  image: string;
   rating?: number;
   reviewCount?: number;
 };
@@ -107,7 +107,7 @@ function ProductList({ products }: { products: Product[] }) {
                 </button>
 
                 <button className="flex-1 rounded-md border border-indigo-600 text-indigo-600 py-2 hover:bg-indigo-50 transition font-medium">
-                  ₹{product.price}
+                  ₹{product.price.toLocaleString()}
                 </button>
               </div>
 

@@ -1,6 +1,4 @@
-
-
- [
+[
   {
     "id": 1,
     "name": "Goldfish",
@@ -180,5 +178,13 @@
     "rating": 4.5,
     "reviewCount": 98,
     "price": 2500
+  },
+  {
+    "id": 11,
+    "name": "Shark",
+    "description": "Colorful aquarium fish",
+    "image": "https://www.bigfishexpeditions.com/wp-content/uploads/2023/03/Mako-Shark-Photography-Tips-900x600.jpg.",
+    "price": 1500,
+    "rating": 4.7
   }
 ]
