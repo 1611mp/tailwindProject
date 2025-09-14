@@ -186,5 +186,39 @@
     "image": "https://www.bigfishexpeditions.com/wp-content/uploads/2023/03/Mako-Shark-Photography-Tips-900x600.jpg.",
     "price": 1500,
     "rating": 4.7
+  },
+  {
+    "id": 13,
+    "name": "Piranha",
+    "image": "https://a-z-animals.com/media/2021/12/shutterstock_62473318-1.jpg",
+    "description": "Colorful aquarium fish",
+    "scientific_name": "Amphiprioninae",
+    "origin": "Indian and Pacific Oceans",
+    "habitat": "Coral reefs",
+    "size": "Up to 4 inches",
+    "lifespan": "6-10 years",
+    "diet": "Omnivorous",
+    "temperament": "Peaceful",
+    "care_tips": "Tank 20 gallons, water 24�27�C",
+    "rating": 4.6,
+    "reviewCount": 120,
+    "price": 1800
+  },
+  {
+    "id": 18,
+    "name": "Neon Tetra",
+    "description": "A small, colorful schooling fish",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/66/Paracheirodon_innesi_neon_tetra.jpg",
+    "scientific_name": "Paracheirodon innesi",
+    "origin": "Amazon Basin",
+    "habitat": "Freshwater rivers and streams",
+    "size": "Up to 1.5 inches",
+    "lifespan": "5-8 years",
+    "diet": "Omnivorous",
+    "temperament": "Peaceful",
+    "care_tips": "Tank 10 gallons, water 22�26�C",
+    "rating": 4.9,
+    "reviewCount": 300,
+    "price": 150
   }
 ]

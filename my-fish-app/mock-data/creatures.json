@@ -1,0 +1,52 @@
+{
+  "fish": [
+    {
+      "id": 1,
+      "name": "Goldfish",
+      "scientificName": "Carassius auratus",
+      "habitat": "Freshwater lakes and ponds",
+      "food": "Flakes and pellets",
+      "image": "/goldfish.jpg"
+    }
+  ],
+  "birds": [
+    {
+      "id": 2,
+      "name": "Parrot",
+      "scientificName": "Psittaciformes",
+      "habitat": "Tropical forests",
+      "food": "Seeds and fruits",
+      "image": "/parrot.jpg"
+    }
+  ],
+  "mammals": [
+    {
+      "id": 3,
+      "name": "Elephant",
+      "scientificName": "Loxodonta africana",
+      "habitat": "Savannah and forests",
+      "food": "Grass, fruits, and bark",
+      "image": "/elephant.jpg"
+    }
+  ],
+  "reptiles": [
+    {
+      "id": 4,
+      "name": "Green Iguana",
+      "scientificName": "Iguana iguana",
+      "habitat": "Rainforests and riverbanks",
+      "food": "Leaves and fruits",
+      "image": "/iguana.jpg"
+    }
+  ],
+  "amphibians": [
+    {
+      "id": 5,
+      "name": "Red-eyed Tree Frog",
+      "scientificName": "Agalychnis callidryas",
+      "habitat": "Tropical rainforests",
+      "food": "Insects",
+      "image": "/treefrog.jpg"
+    }
+  ]
+}
