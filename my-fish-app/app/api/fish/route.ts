@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
 
+<<<<<<< HEAD
 const filePath = path.join(process.cwd(), "mock-data", "fish.json");
 
 // GET: return all fish
@@ -35,4 +36,14 @@ export async function POST(request: Request) {
     console.error("Error adding fish:", error);
     return NextResponse.json({ error: "Failed to add fish" }, { status: 500 });
   }
+=======
+export async function GET() {
+  // Read fish data from mock-data/fish.json (correct path)
+  const filePath = path.join(process.cwd(), "mock-data/fish.json");
+  let fishData = [];
+  if (fs.existsSync(filePath)) {
+    fishData = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+  }
+  return NextResponse.json(fishData);
+>>>>>>> 7336b735f383d994ca17fec557878c59fa9a6606
 }
