@@ -139,16 +139,16 @@ export default function ProductsPage() {
   }, []);
 
   return (
-    <div className="w-full min-h-screen bg-indigo-100 py-10">
-    <div className="max-w-6xl mx-auto py-10 px-4">
-      {/* Page Heading */}
-      <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center text-gray-800">
-        Shop Products
-      </h1>
+    <div className="w-full min-h-screen bg-gradient-to-b from-cyan-100 via-blue-50 to-blue-200 py-10">
+      <div className="max-w-6xl mx-auto py-10 px-4">
+        {/* Page Heading */}
+        <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center text-gray-800">
+          Shop Products
+        </h1>
 
-      {/* Products Grid */}
-      <ProductList products={products} />
-    </div>
+        {/* Products Grid */}
+        <ProductList products={products} />
+      </div>
     </div>
   );
 }

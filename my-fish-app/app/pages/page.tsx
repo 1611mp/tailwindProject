@@ -1,30 +1,37 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 
 const categories = [
   {
     id: 1,
     title: "Terrarium",
-    description: "Terrarium organisms like reptiles, amphibians, and plants that thrive in enclosed glass habitats.",
+    description:
+      "Terrarium organisms like reptiles, amphibians, and plants that thrive in enclosed glass habitats.",
     image: "/terrarium1.jpg",
+    path: "/organisms/terrarium",
   },
   {
     id: 2,
     title: "Freshwater",
-    description: "Freshwater fishes and organisms commonly found in rivers, lakes, and ponds.",
+    description:
+      "Freshwater fishes and organisms commonly found in rivers, lakes, and ponds.",
     image: "/freshwater.jpg",
+    path: "/organisms/freshwater",
   },
   {
     id: 3,
     title: "Marine",
-    description: "Marine fishes and organisms that inhabit saltwater oceans and seas.",
+    description:
+      "Marine fishes and organisms that inhabit saltwater oceans and seas.",
     image: "/marine.jpg",
+    path: "/organisms/marine",
   },
 ];
 
 export default function PagesSection() {
   return (
-    <div className="min-h-screen  bg-gradient-to-b from-coral-300 via-blue-100 to-blue-400 py-16 px-6">
+    <div className="min-h-screen bg-gradient-to-b from-coral-300 via-blue-100 to-blue-400 py-16 px-6">
       <div className="max-w-6xl mx-auto text-center">
         <h1 className="text-4xl font-bold text-gray-800 mb-4">Explore Our Pages</h1>
         <p className="text-gray-600 mb-12">
@@ -47,9 +54,14 @@ export default function PagesSection() {
               <div className="p-6 text-left">
                 <h2 className="text-2xl font-semibold text-gray-800">{cat.title}</h2>
                 <p className="text-gray-600 mt-3">{cat.description}</p>
-                <button className="mt-4 inline-block px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">
+
+                {/* Make button a Link */}
+                <Link
+                  href={cat.path}
+                  className="mt-4 inline-block px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition"
+                >
                   View More
-                </button>
+                </Link>
               </div>
             </div>
           ))}
