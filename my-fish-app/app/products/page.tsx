@@ -131,7 +131,7 @@ export default function ProductsPage() {
 
   useEffect(() => {
     async function fetchProducts() {
-      const res = await fetch("/api/fish");
+      const res = await fetch("/api/addFish");
       const data = await res.json();
       setProducts(data);
     }
