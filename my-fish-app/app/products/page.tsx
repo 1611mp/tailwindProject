@@ -2,6 +2,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+// Remove this line: import { fetchWithAuth } from "@/lib/fetchWithAuth";
 
 type Product = {
   id?: number;
@@ -19,14 +20,8 @@ export default function ProductsPage() {
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const res = await fetch("/api/addFish"); // Corrected to use direct fetch to the local API route
-
-        if (!res.ok) {
-          const errorData = await res.json();
-          console.error("API error:", errorData.error);
-          return;
-        }
-
+        // Change this line to use standard fetch
+        const res = await fetch("/api/fish");
         const data = await res.json();
         setProducts(data);
       } catch (error) {
@@ -36,6 +31,7 @@ export default function ProductsPage() {
 
     fetchProducts();
 
+    // Optional: poll every 5 seconds to show new fish automatically
     const interval = setInterval(fetchProducts, 5000);
     return () => clearInterval(interval);
   }, []);
