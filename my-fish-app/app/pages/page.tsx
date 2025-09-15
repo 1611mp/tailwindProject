@@ -10,7 +10,7 @@ const categories = [
     description:
       "Terrarium organisms like reptiles, amphibians, and plants that thrive in enclosed glass habitats.",
     image: "/terrarium1.jpg",
-    link: "/organisms/terrarium",
+    path: "/organisms/terrarium",
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const categories = [
     description:
       "Freshwater fishes and organisms commonly found in rivers, lakes, and ponds.",
     image: "/freshwater.jpg",
-    link: "/organisms/freshwater",
+    path: "/organisms/freshwater",
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const categories = [
     description:
       "Marine fishes and organisms that inhabit saltwater oceans and seas.",
     image: "/marine.jpg",
-    link: "/organisms/marine",
+    path: "/organisms/marine",
   },
 ];
 
@@ -60,11 +60,12 @@ export default function PagesSection() {
                 </h2>
                 <p className="text-gray-600 mt-3">{cat.description}</p>
 
-                {/* ✅ Use Link for navigation */}
-                <Link href={cat.link}>
-                  <button className="mt-4 inline-block px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">
-                    View More
-                  </button>
+                {/* Make button a Link */}
+                <Link
+                  href={cat.path}
+                  className="mt-4 inline-block px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition"
+                >
+                  View More
                 </Link>
               </div>
             </div>

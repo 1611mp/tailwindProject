@@ -1,7 +1,7 @@
 // app/about/page.tsx
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-blue-50 to-blue-100 text-gray-800">
+    <main className="min-h-screen bg-gradient-to-b from-cyan-100 via-blue-50 to-blue-200 text-gray-800">
       {/* Hero Section */}
       <section className="text-center py-20 px-6">
         <h1 className="text-5xl font-bold text-blue-700 mb-4">About Aquacharm</h1>

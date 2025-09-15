@@ -14,6 +14,18 @@ type Fish = {
 
 const JWT_SECRET = process.env.FISH_API_TOKEN || "super_secure_random_token_12345";
 
+// GET handler to return fish list
+export async function GET() {
+  try {
+    const fishFile = path.join(process.cwd(), "mock-data/fish.json");
+    const fishList: Fish[] = JSON.parse(fs.readFileSync(fishFile, "utf-8"));
+    return NextResponse.json(fishList);
+  } catch (error) {
+    console.error("Failed to fetch fish:", error);
+    return NextResponse.json({ error: "Failed to fetch fish" }, { status: 500 });
+  }
+}
+
 export async function POST(req: NextRequest) {
   const authHeader = req.headers.get("Authorization");
   if (!authHeader) {
