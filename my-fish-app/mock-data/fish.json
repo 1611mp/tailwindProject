@@ -186,5 +186,27 @@
     "image": "https://www.bigfishexpeditions.com/wp-content/uploads/2023/03/Mako-Shark-Photography-Tips-900x600.jpg.",
     "price": 1500,
     "rating": 4.7
+  },
+  {
+    "id": 12,
+    "name": "TestFish",
+    "image": "/testfish.jpg",
+    "description": "This is a test fish entry.",
+    "scientific_name": "Testus fishus",
+    "origin": "Test River",
+    "habitat": "Test waters",
+    "size": "5 cm",
+    "lifespan": "2 years",
+    "diet": "Omnivore",
+    "temperament": "Peaceful",
+    "care_tips": "Keep it happy",
+    "interesting_fact": "It is only for testing"
+  },
+  {
+    "id": 14,
+    "name": "Girgit",
+    "image": "/clownfish.jpg",
+    "description": "Colorful marine fish known from Finding Nemo",
+    "price": 2200
   }
 ]
