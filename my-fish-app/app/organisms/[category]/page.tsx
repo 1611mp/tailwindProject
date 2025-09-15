@@ -1,90 +1,99 @@
 import { notFound } from "next/navigation";
+import path from "path";
+import { promises as fs } from "fs";
 
-const contentMap: Record<
-  string,
-  {
-    title: string;
-    description: string;
-    images: { alt: string; src: string }[];
-    stats: { label: string; value: string }[];
-    button: string;
-  }
-> = {
-  terrarium: {
-    title: "Terrarium Organisms",
-    description:
-      "Terrariums are miniature ecosystems that thrive in glass containers, containing soil, plants, and small invertebrates...",
-    images: [
-      { alt: "Cushion Moss", src: "/images/moss.jpg" },
-      { alt: "Fittonia (Nerve Plant)", src: "/images/fittonia.jpg" },
-      { alt: "Springtails", src: "/images/springtail.jpg" },
-      { alt: "Isopods", src: "/images/isopods.jpg" },
-    ],
-    stats: [
-      { label: "Moss Varieties", value: "15+" },
-      { label: "Mini Ecosystems", value: "500+" },
-      { label: "Cleanup Crew", value: "5+" },
-      { label: "Low-maintenance", value: "Year-round" },
-    ],
-    button: "Learn More",
-  },
-
-  freshwater: {
-    title: "Freshwater Fish",
-    description:
-      "Freshwater ecosystems are home to a wide variety of fish species, ranging from small schooling fish to large predators...",
-    images: [
-      { alt: "Goldfish", src: "/images/goldfish.jpg" },
-      { alt: "Cichlid", src: "/images/cichlid.jpeg" },
-      { alt: "Guppy", src: "/images/guppy.jpg" },
-      { alt: "Catfish", src: "/images/catfish.jpg" },
-    ],
-    stats: [
-      { label: "Known Species", value: "18,000+" },
-      { label: "Aquariums Worldwide", value: "50M+" },
-      { label: "Popular Aquarium Fish", value: "100+" },
-      { label: "Lifespan Range", value: "1–20 yrs" },
-    ],
-    button: "Explore Freshwater Fish",
-  },
-
-  marine: {
-    title: "Marine Fish",
-    description:
-      "Marine ecosystems host some of the most colorful and diverse fish species on the planet...",
-    images: [
-      { alt: "Clownfish", src: "/images/Clownfish1.jpg" },
-      { alt: "Tang", src: "/images/tang.jpg" },
-      { alt: "Lionfish", src: "/images/lionfish.jpg" },
-      { alt: "Seahorse", src: "/images/Seahorse.jpg" },
-    ],
-    stats: [
-      { label: "Marine Species", value: "20,000+" },
-      { label: "Coral Reef Diversity", value: "500+" },
-      { label: "Endangered Species", value: "2,000+" },
-      { label: "Lifespan Range", value: "2–50 yrs" },
-    ],
-    button: "Discover Marine Fish",
-  },
-};
-
-export default function OrganismCategoryPage({
+export default async function OrganismCategoryPage({
   params,
 }: {
   params: { category: string };
 }) {
-  const content = contentMap[params.category.toLowerCase()];
+  const category = params.category.toLowerCase();
 
+  // Dynamic data if freshwater
+  let fishList: any[] = [];
+  if (category === "freshwater") {
+    const filePath = path.join(process.cwd(), "mock-data", "fish.json");
+    const data = await fs.readFile(filePath, "utf-8");
+    fishList = JSON.parse(data);
+  }
+
+  const contentMap: Record<
+    string,
+    {
+      title: string;
+      description: string;
+      images: { alt: string; src: string }[];
+      stats: { label: string; value: string }[];
+      button: string;
+    }
+  > = {
+    terrarium: {
+      title: "Terrarium Organisms",
+      description:
+        "Terrariums are miniature ecosystems that thrive in glass containers, containing soil, plants, and small invertebrates...",
+      images: [
+        { alt: "Cushion Moss", src: "/images/moss.jpg" },
+        { alt: "Fittonia", src: "/images/fittonia.jpg" },
+        { alt: "Springtails", src: "/images/springtail.jpg" },
+        { alt: "Isopods", src: "/images/isopods.jpg" },
+      ],
+      stats: [
+        { label: "Moss Varieties", value: "15+" },
+        { label: "Mini Ecosystems", value: "500+" },
+        { label: "Cleanup Crew", value: "5+" },
+        { label: "Low-maintenance", value: "Year-round" },
+      ],
+      button: "Learn More",
+    },
+
+    freshwater: {
+      title: "Freshwater Fish",
+      description:
+        "Freshwater ecosystems are home to a wide variety of fish species, ranging from small schooling fish to large predators...",
+      images: fishList.slice(0, 4).map((f) => ({
+        alt: f.name,
+        src: f.image,
+      })), // ✅ auto from JSON
+      stats: [
+        { label: "Known Species", value: "18,000+" },
+        { label: "In Your Dataset", value: `${fishList.length}` }, // ✅ dynamic count
+        { label: "Popular Aquarium Fish", value: "100+" },
+        { label: "Lifespan Range", value: "1–20 yrs" },
+      ],
+      button: "Explore Freshwater Fish",
+    },
+
+    marine: {
+      title: "Marine Fish",
+      description:
+        "Marine ecosystems host some of the most colorful and diverse fish species on the planet...",
+      images: [
+        { alt: "Clownfish", src: "/images/Clownfish1.jpg" },
+        { alt: "Tang", src: "/images/tang.jpg" },
+        { alt: "Lionfish", src: "/images/lionfish.jpg" },
+        { alt: "Seahorse", src: "/images/Seahorse.jpg" },
+      ],
+      stats: [
+        { label: "Marine Species", value: "20,000+" },
+        { label: "Coral Reef Diversity", value: "500+" },
+        { label: "Endangered Species", value: "2,000+" },
+        { label: "Lifespan Range", value: "2–50 yrs" },
+      ],
+      button: "Discover Marine Fish",
+    },
+  };
+
+  const content = contentMap[category];
   if (!content) return notFound();
 
   return (
     <div className="overflow-hidden bg-gradient-to-b from-cyan-100 via-blue-50 to-blue-200 py-24 sm:py-32 dark:bg-gray-900">
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
         <div className="max-w-4xl">
-          <h1 className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 hover:text-sky-600 sm:text-5xl dark:text-white dark:hover:text-cyan-400">
+          <h1 className="mt-2 text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl dark:text-white">
             {content.title}
           </h1>
-          <p className="mt-6 text-xl/8 text-balance text-gray-700 dark:text-gray-300">
+          <p className="mt-6 text-xl text-gray-700 dark:text-gray-300">
             {content.description}
           </p>
         </div>
@@ -96,7 +105,7 @@ export default function OrganismCategoryPage({
               {content.images.map((img, i) => (
                 <div
                   key={i}
-                  className="aspect-square bg-gradient-to-br from-blue-200 via-blue-400 to-blue-600 overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10 dark:shadow-none dark:outline-white/10"
+                  className="aspect-square bg-gradient-to-br from-blue-200 via-blue-400 to-blue-600 overflow-hidden rounded-xl shadow-xl"
                 >
                   <img
                     alt={img.alt}
@@ -110,20 +119,16 @@ export default function OrganismCategoryPage({
 
           {/* Stats */}
           <div className="max-lg:mt-16 lg:col-span-1">
-            <p className="text-base/7 font-semibold text-gray-500 dark:text-gray-400">
+            <p className="text-base font-semibold text-gray-500 dark:text-gray-400">
               Key Stats
             </p>
-            <hr className="mt-6 border-t border-gray-200 dark:border-gray-700" />
             <dl className="mt-6 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
               {content.stats.map((stat, i) => (
-                <div
-                  key={i}
-                  className="flex flex-col gap-y-2 border-b border-dotted border-gray-200 pb-4 dark:border-gray-700"
-                >
-                  <dt className="text-sm/6 text-gray-600 dark:text-gray-400">
+                <div key={i} className="flex flex-col gap-y-2 pb-4 border-b border-dotted border-gray-300">
+                  <dt className="text-sm text-gray-600 dark:text-gray-400">
                     {stat.label}
                   </dt>
-                  <dd className="order-first text-6xl font-semibold tracking-tight text-gray-900 animate-pulse dark:text-white">
+                  <dd className="order-first text-4xl font-semibold text-gray-900 dark:text-white">
                     {stat.value}
                   </dd>
                 </div>
