@@ -208,5 +208,11 @@
     "image": "/clownfish.jpg",
     "description": "Colorful marine fish known from Finding Nemo",
     "price": 2200
+  },
+  {
+    "name": "Salmon",
+    "description": "A fish known for its pink-orange flesh.",
+    "price": "?1500",
+    "image": "https://example.com/salmon.jpg"
   }
 ]
